@@ -2,6 +2,7 @@ package de.iits.aoc._2022
 
 import getInputForDay
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 
 internal class Day24Test {
@@ -28,6 +29,7 @@ internal class Day24Test {
 
 
     @Test
+    @Disabled("runs about 3 minutes")
     fun testInput() {
         val result = sut.calculate(getInputForDay(24, false))
         println(result)
@@ -35,6 +37,7 @@ internal class Day24Test {
     }
 
     @Test
+    @Disabled("runs about 8 minutes")
     fun testInput2() {
         val result = sut.calculate(getInputForDay(24, false), true)
         println(result)

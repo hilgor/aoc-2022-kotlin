@@ -16,7 +16,7 @@ internal class Day22Test {
     }
 
     @Test
-    @Disabled  //Example layout differs from actual input, not a general solution
+    @Disabled("Example layout differs from actual input, not a general solution")
     fun testExample2() {
         val result = sut.calculate(getInputForDay(22), true, 4)
 

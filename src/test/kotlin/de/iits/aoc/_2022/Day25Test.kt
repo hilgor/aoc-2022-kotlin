@@ -14,14 +14,6 @@ internal class Day25Test {
         assertEquals("2=-1=0", result)
     }
 
-    @Test
-    fun testExample2() {
-        val result = sut.calculate2(getInputForDay(25))
-
-        assertEquals(4, result)
-    }
-
-
     ///
     ///
 
@@ -30,12 +22,6 @@ internal class Day25Test {
     fun testInput() {
         val result = sut.calculate(getInputForDay(25, false))
         assertEquals("2=020-===0-1===2=020", result)
-        println(result)
-    }
-
-    @Test
-    fun testInput2() {
-        val result = sut.calculate2(INPUT)
         println(result)
     }
 

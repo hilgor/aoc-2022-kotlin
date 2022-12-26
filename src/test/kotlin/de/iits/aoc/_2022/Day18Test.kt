@@ -36,7 +36,7 @@ internal class Day18Test {
     }
 
     @Test
-    @Disabled //Takes about 1 min
+    @Disabled("Takes about 1 min")
     fun testInput2() {
         val result = real.calculate2()
         println(result)

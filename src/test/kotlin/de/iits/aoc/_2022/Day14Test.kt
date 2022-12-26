@@ -4,7 +4,6 @@ import getInputForDay
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
-import java.util.PropertyPermission
 import kotlin.test.assertNull
 
 internal class Day14Test {
@@ -38,7 +37,7 @@ internal class Day14Test {
     }
 
     @Test
-    @Disabled //Runs about 4 mins on my machine
+    @Disabled("Runs about 4 mins on my machine")
     fun testInput2() {
         val result = sut.calculate(getInputForDay(14, false), Point(500,0))
         println(result)

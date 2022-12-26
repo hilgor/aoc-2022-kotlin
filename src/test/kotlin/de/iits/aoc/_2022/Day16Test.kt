@@ -36,7 +36,7 @@ internal class Day16Test {
     }
 
     @Test
-    @Disabled //about 16 mins on my machine
+    @Disabled("about 16 mins on my machine")
     fun testInput2() {
         val result = sut.calculate2(getInputForDay(16, false))
         println(result)
