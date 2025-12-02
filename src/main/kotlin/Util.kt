@@ -1,13 +1,15 @@
 import java.util.*
 
-fun getInputForDay(day: Int, example: Boolean = true): String {
+fun getInputForDay(day: Int, example: Boolean = true, year: Int = 2022): String {
     val path = (if (day < 10) "Day0$day" else "Day$day") + (if (example) "Example" else "Input")
-    return object {}.javaClass.getResource(path)!!.readText()
+    return object {}.javaClass.getResource("$year/$path")!!.readText()
 }
 
 fun sparseListOf(vararg ranges: CharRange): List<Char> = ranges.flatMap { it }
 
 fun sparseListOf(vararg ranges: IntRange): List<Int> = ranges.flatMap { it }
+
+fun sparseListOf(vararg ranges: LongRange): List<Long> = ranges.flatMap { it }
 
 fun String.stripped() = removeRegex("[^0-9a-zA-Z]")
 
@@ -18,9 +20,14 @@ fun String.filledLines() = lines()
 
 fun List<Any>.dropFirst(count: Int) = subList(count, this.size)
 
-fun String.toRange(range: String, delimiter: String = "-") =
-    with(range.split(delimiter)) {
-        sparseListOf(first().toInt()..last().toInt())
+fun String.toRange(delimiter: String = "-") =
+    with(this.split(delimiter)) {
+        (first().toInt()..last().toInt())
+    }
+
+fun String.toLongRange(delimiter: String = "-") : List<Long> =
+    this.split("-").let {
+        (it.first().toLong()..it.last().toLong()).toList()
     }
 
 fun String.removeRegex(regex: String) = replace(regex.toRegex(), "")
