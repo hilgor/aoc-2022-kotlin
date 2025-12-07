@@ -1,4 +1,5 @@
 import java.util.*
+import java.util.function.Predicate
 
 fun getInputForDay(day: Int, example: Boolean = true, year: Int = 2022): String {
     val path = (if (day < 10) "Day0$day" else "Day$day") + (if (example) "Example" else "Input")
@@ -30,7 +31,7 @@ fun String.toLongRange(delimiter: String = "-") : List<Long> =
         (it.first().toLong()..it.last().toLong()).toList()
     }
 
-fun String.removeRegex(regex: String) = replace(regex.toRegex(), "")
+fun String.removeRegex(regex: String, replaceWith: String = "") = replace(regex.toRegex(), replaceWith)
 
 fun String.getAllInts(separator: String = " ") =
     split(separator)
@@ -48,7 +49,7 @@ fun <T : Any> rotate90(matrix: List<List<T>>, initializer: T): List<MutableList<
 }
 
 fun rotate180(matrix: List<List<Int>>) = rotate90(rotate90(matrix, 0), 0)
-fun rotate270(matrix: List<List<Int>>) = rotate90(rotate90(rotate90(matrix, 0), 0), 0)
+fun  <T : Any> rotate270(matrix: List<List<T>>, init: T) = rotate90(rotate90(rotate90(matrix, init), init), init)
 
 fun <T : Any> transpose(matrix: List<List<T>>, initializer: T): List<MutableList<T>> {
     val dest = List(matrix.maxOf { it.size }) { MutableList(matrix.size) { initializer } }
@@ -79,3 +80,15 @@ fun <T> toRealList(ints: List<Int>, objects: List<T>) =
     ints.map { objects[it] }
 
 fun <T> List<T>.nth(n: Int): T = this[n % size]
+
+fun <T> List<T>.splitOn(predicate: Predicate<T>): List<List<T>> =
+    fold(mutableListOf(mutableListOf<T>())) { acc, item ->
+        if (predicate.test(item)) {
+            if (acc.last().isNotEmpty()) {
+                acc.add(mutableListOf())
+            }
+        } else {
+            acc.last().add(item)
+        }
+        acc
+    }.filter { it.isNotEmpty() }
