@@ -1,7 +1,7 @@
 package de.iits.aoc._2022
 
-import filledLines
-import getAllInts
+import de.iits.aoc.util.filledLines
+import de.iits.aoc.util.getAllInts
 
 class Day07 {
 

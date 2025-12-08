@@ -1,6 +1,6 @@
 package de.iits.aoc._2022
 
-import filledLines
+import de.iits.aoc.util.filledLines
 import java.lang.Integer.max
 import java.lang.Integer.min
 import kotlin.math.absoluteValue

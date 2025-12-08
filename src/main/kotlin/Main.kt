@@ -24,8 +24,8 @@ fun main(args: Array<String>) {
 //
 //    matrix.forEach { println(it) }
 //    println("------------ orig")
-//    rotate90(transpose(matrix)).forEach { println(it) }
-//    println("------------ transpose")
+//    de.iits.aoc.util.rotate90(de.iits.aoc.util.transpose(matrix)).forEach { println(it) }
+//    println("------------ de.iits.aoc.util.transpose")
 
 
 

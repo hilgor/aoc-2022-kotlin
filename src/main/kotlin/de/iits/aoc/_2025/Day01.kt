@@ -1,7 +1,6 @@
 package de.iits.aoc._2025
 
-import filledLines
-import splitToInts
+import de.iits.aoc.util.filledLines
 import kotlin.math.abs
 
 class Day01 {

@@ -1,7 +1,5 @@
 package de.iits.aoc._2025
 
-import filledLines
-
 class Day05 {
 
     fun calculate(inputStr: String): Int {

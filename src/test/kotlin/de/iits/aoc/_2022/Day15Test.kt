@@ -1,6 +1,6 @@
 package de.iits.aoc._2022
 
-import getInputForDay
+import de.iits.aoc.util.getInputForDay
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Test

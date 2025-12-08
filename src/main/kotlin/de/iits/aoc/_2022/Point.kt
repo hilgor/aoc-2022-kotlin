@@ -1,6 +1,6 @@
 package de.iits.aoc._2022
 
-import join
+import de.iits.aoc.util.join
 import kotlin.math.max
 import kotlin.math.min
 

@@ -1,4 +1,6 @@
-import java.util.*
+package de.iits.aoc.util
+
+import java.util.Collections
 import java.util.function.Predicate
 
 fun getInputForDay(day: Int, example: Boolean = true, year: Int = 2022): String {
@@ -17,7 +19,6 @@ fun String.stripped() = removeRegex("[^0-9a-zA-Z]")
 fun List<Char>.join() = joinToString("")
 
 fun String.filledLines() = lines()
-//    .run { subList(1, this.size - 1) }
 
 fun List<Any>.dropFirst(count: Int) = subList(count, this.size)
 

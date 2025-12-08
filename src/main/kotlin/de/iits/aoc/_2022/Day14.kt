@@ -1,9 +1,7 @@
 package de.iits.aoc._2022
 
-import filledLines
-import join
-import kotlin.math.max
-import kotlin.math.min
+import de.iits.aoc.util.filledLines
+import de.iits.aoc.util.join
 
 class Day14 {
 

@@ -1,8 +1,8 @@
 package de.iits.aoc._2022
 
-import filledLines
-import getInputForDay
-import join
+import de.iits.aoc.util.filledLines
+import de.iits.aoc.util.getInputForDay
+import de.iits.aoc.util.join
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 

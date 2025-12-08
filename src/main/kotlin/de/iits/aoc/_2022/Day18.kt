@@ -1,9 +1,8 @@
 package de.iits.aoc._2022
 
-import filledLines
-import splitToInts
+import de.iits.aoc.util.filledLines
+import de.iits.aoc.util.splitToInts
 import kotlin.math.absoluteValue
-import kotlin.math.min
 
 class Day18(inputStr: String) {
 

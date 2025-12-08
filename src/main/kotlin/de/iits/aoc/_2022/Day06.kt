@@ -1,7 +1,6 @@
 package de.iits.aoc._2022
 
-import filledLines
-import join
+import de.iits.aoc.util.join
 
 class Day06 {
 

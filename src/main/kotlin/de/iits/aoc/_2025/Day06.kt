@@ -1,10 +1,10 @@
 package de.iits.aoc._2025
 
-import filledLines
-import removeRegex
-import rotate270
-import rotate90
-import splitOn
+import de.iits.aoc.util.filledLines
+import de.iits.aoc.util.removeRegex
+import de.iits.aoc.util.rotate270
+import de.iits.aoc.util.rotate90
+import de.iits.aoc.util.splitOn
 
 class Day06 {
 

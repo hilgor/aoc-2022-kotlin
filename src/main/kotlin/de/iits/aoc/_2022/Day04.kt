@@ -1,6 +1,6 @@
 package de.iits.aoc._2022
 
-import sparseListOf
+import de.iits.aoc.util.sparseListOf
 
 class Day04 {
 

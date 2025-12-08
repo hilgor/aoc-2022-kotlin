@@ -1,8 +1,7 @@
 package de.iits.aoc._2022
 
-import filledLines
-import join
-import java.lang.IllegalArgumentException
+import de.iits.aoc.util.filledLines
+import de.iits.aoc.util.join
 
 class Day22 {
 

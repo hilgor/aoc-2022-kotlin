@@ -1,8 +1,8 @@
 package de.iits.aoc._2022
 
-import filledLines
-import join
-import stripped
+import de.iits.aoc.util.filledLines
+import de.iits.aoc.util.join
+import de.iits.aoc.util.stripped
 
 class Day05 {
 

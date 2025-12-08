@@ -1,6 +1,6 @@
 package de.iits.aoc._2022
 
-import filledLines
+import de.iits.aoc.util.filledLines
 import kotlin.math.absoluteValue
 
 class Day12 {

@@ -1,6 +1,6 @@
 package de.iits.aoc._2022
 
-import filledLines
+import de.iits.aoc.util.filledLines
 import java.util.regex.Pattern
 import kotlin.math.ceil
 

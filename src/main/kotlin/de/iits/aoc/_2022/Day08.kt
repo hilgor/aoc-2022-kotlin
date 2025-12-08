@@ -1,8 +1,8 @@
 package de.iits.aoc._2022
 
-import filledLines
-import rotate90
-import splitToInts
+import de.iits.aoc.util.filledLines
+import de.iits.aoc.util.rotate90
+import de.iits.aoc.util.splitToInts
 
 class Day08 {
 

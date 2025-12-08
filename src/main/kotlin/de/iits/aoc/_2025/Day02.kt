@@ -1,6 +1,6 @@
 package de.iits.aoc._2025
 
-import toLongRange
+import de.iits.aoc.util.toLongRange
 
 class Day02 {
 
