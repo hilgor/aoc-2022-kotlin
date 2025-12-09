@@ -5,7 +5,7 @@ import java.util.function.Predicate
 
 fun getInputForDay(day: Int, example: Boolean = true, year: Int = 2022): String {
     val path = (if (day < 10) "Day0$day" else "Day$day") + (if (example) "Example" else "Input")
-    return object {}.javaClass.getResource("$year/$path")!!.readText()
+    return object {}.javaClass.getResource("/$year/$path")!!.readText()
 }
 
 fun sparseListOf(vararg ranges: CharRange): List<Char> = ranges.flatMap { it }
