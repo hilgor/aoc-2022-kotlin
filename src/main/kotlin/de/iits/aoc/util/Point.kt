@@ -2,14 +2,17 @@ package de.iits.aoc.util
 
 import kotlin.math.absoluteValue
 
-data class Point(var x: Long, var y: Long, var type: Char = '.') {
+data class Point(val x: Long, val y: Long, val type: Char = '.') {
 
-    constructor(coordinates: String, delimiter: String = ",") : this(0, 0) {
-        val parts = coordinates.split(delimiter)
-        require(parts.size >= 2) { "coordinates should be 2-D" }
+    companion object {
+       fun fromStringCoords(coordinates: String, delimiter: String = ","): Point {
+           val parts = coordinates.split(delimiter)
+           require(parts.size >= 2) { "coordinates should be 2-D" }
 
-        x = parts[0].toLong()
-        y = parts[1].toLong()
+           val x = parts[0].toLong()
+           val y = parts[1].toLong()
+           return Point(x, y)
+       }
     }
 
     fun sameCoords(other: Point) = x == other.x && y == other.y

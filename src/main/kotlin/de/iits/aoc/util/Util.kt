@@ -93,3 +93,21 @@ fun <T> List<T>.splitOn(predicate: Predicate<T>): List<List<T>> =
         }
         acc
     }.filter { it.isNotEmpty() }
+
+fun <T> allSubsets(list: List<T>): List<List<T>> {
+    val n = list.size
+    val result = mutableListOf<List<T>>()
+
+    // 0 bis (2^n - 1)
+    for (mask in 0 until (1 shl n)) {
+        val subset = mutableListOf<T>()
+        for (i in 0 until n) {
+            if ((mask and (1 shl i)) != 0) {
+                subset += list[i]
+            }
+        }
+        result += subset
+    }
+
+    return result
+}

@@ -8,7 +8,7 @@ import kotlin.math.min
 class Day09 {
 
     fun calculate(inputStr: String): Long =
-        calculateMaxArea(inputStr.filledLines().map(::Point))
+        calculateMaxArea(inputStr.filledLines().map(Point::fromStringCoords))
 
     private fun calculateMaxArea(tiles: List<Point>): Long =
         tiles.foldIndexed(0L) { index, currentMax, currentTile ->
@@ -18,7 +18,7 @@ class Day09 {
         }
 
     fun calculate2(inputStr: String): Long {
-        val redTiles = inputStr.filledLines().map(::Point)
+        val redTiles = inputStr.filledLines().map(Point::fromStringCoords)
         val greenTiles = addGreenTiles(redTiles)
 
         val xMap = (redTiles + greenTiles).groupBy { it.x }.mapValues { (_, list) -> list.map { it.y }.sorted() }
